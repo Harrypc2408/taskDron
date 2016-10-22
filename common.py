@@ -57,7 +57,7 @@ def menu():
         time1 = end_time - start_time
         print(time1)
         def data_entry():
-            c.execute("INSERT INTO stuffToPlot VALUES({},{})".format(name_user, time1))
+            c.execute("INSERT INTO stuffToPlot VALUES(?,?)",(name_user, time1) )
             conn.commit()
             c.close()
             conn.close()
